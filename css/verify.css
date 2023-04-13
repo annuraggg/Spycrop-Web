@@ -1,0 +1,86 @@
+@import url("https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+:root {
+  --lightColor: aliceblue;
+  --darkColor: black;
+  --grayShade: gray;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--darkColor);
+  color: var(--lightColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  clear: both;
+}
+
+.form-control {
+  -webkit-transition: none;
+  transition: none;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+.form-control:focus {
+  color: #3f4254;
+  background-color: #ffffff;
+  border-color: #884377;
+  outline: 0;
+}
+
+.form-control.form-control-solid {
+  background-color: transparent;
+  border-color: #f3f6f9;
+  color: white;
+  transition: color 0.15s ease, background-color 0.15s ease,
+    border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-control.form-control-solid:active,
+.form-control.form-control-solid.active,
+.form-control.form-control-solid:focus,
+.form-control.form-control-solid.focus {
+  background-color: blueviolet;
+  border-color: #ebedf3;
+  color: white;
+  transition: color 0.15s ease, background-color 0.15s ease,
+    border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.form__submit {
+  border: 1px solid var(--lightColor);
+  background-color: transparent;
+  color: var(--lightColor);
+  width: 100%;
+  height: 50px;
+  transition-duration: 0.3s;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.form__submit:hover {
+  background-color: var(--lightColor);
+  color: var(--darkColor);
+  border: 1px solid var(--darkColor);
+}
+
+.form__heading {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
